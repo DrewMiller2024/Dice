@@ -4,20 +4,17 @@ public class Die6
   public Die6(int diceNumber) {
     this.roll(diceNumber);
   }
-  public int getValue() {
+  public int[] getValue() {
     return value;
   }
   public void roll(int diceNumber) {
-      int[] dice;
-      for (int i = 0; i < diceNumber; i++) {
-          if (i < diceNumber) {
-              dice[i] = (int)(Math.random() * 6) + 1;
-              return 
-          }
-      }
+    int[] dieValue = new int[diceNumber];
+    for (int i = 0; i < diceNumber; i++) {
+        value[i] = (int)(Math.random() * 6) + 1;
+    }
   }
-  public int rollAndGetValue() {
-    roll();
+  public int[] rollAndGetValue() {
+    roll(diceNumber);
     return getValue();
   }
 }
